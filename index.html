@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>university website design</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'popins', sans-serif;
+        }
+
+        .header {
+            height: 100vh;
+            width: 100%;
+            background-image: url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/12/f2/09/university-college.jpg?w=1200&h=-1&s=1");
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            
+        }
+            .blackBox{width: 100%;height: 100%;background-color:rgba(0, 0, 0, 0.8)}
+        nav {
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav img {
+            width: 150px;
+        }
+
+        .nav-links {
+            flex: 1;
+            text-align: right;
+        }
+
+        .nav-links ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }
+
+        .nav-links ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .nav-links ul li::after {
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #f44336;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+
+        .nav-links ul li:hover::after {
+            width: 100%;
+        }
+
+        .text-box {
+            width: 90%;
+            color: #efe0e0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .text-box h1 {
+            font-size: 62px;
+        }
+
+        .text-box p {
+            margin: 10px 0 40px;
+            font-size: 14px;
+            color: #fef8f8;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid #f2e8e8;
+            padding: 12px 34px;
+            font-size: 13px;
+            background: transparent;
+            position: relative;
+            cursor: pointer;
+         
+        }
+
+        .btn:hover {
+            border: 1px solid #f44336;
+            background: #f44336;
+            transition: 1s;
+        }
+
+       
+
+        @media(max-width:640px) {
+            .text-box h1 {
+                font-size: 20px;
+            }
+
+            .nav-links ul li {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                background: #f44336;
+                height: 100vh;
+                width: 200px;
+                top: 0;
+                right: 0px;
+                text-align: left;
+                z-index: 2;
+                transition: 1s;
+            }
+
+            .nav-links ul {
+                padding: 30px;
+            }
+        }
+
+        .course {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        p {
+            color: #777;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
+        }
+
+        .row {
+            margin-top: 5%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .course-col {
+            flex-basis: 31%;
+            background: #fff3f3;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            padding: 20px 12px;
+            box-sizing: border-box;
+            transition: 0.5s;
+        }
+
+        h3 {
+            text-align: center;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .course-col:hover {
+            box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.5);
+        }
+         @media(max-width:640px){
+            .row{
+                flex-direction: column;
+            }
+         }
+          .campus{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 50px;
+           justify-content: space-between;
+          }
+                   
+          .campus-col{
+           flex-basis: 32%;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+                             
+          }
+                         
+          .layer{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.5);
+            transition: 0.5s;
+            
+          }
+          .layer:hover{
+              background: transparent;
+          }
+          .layer h3{
+            width: 100%;
+            font-weight: 500;
+            color: rgb(16, 16, 16);
+            font-size: 26px;
+            bottom: 0;
+            position: absolute;
+            transition: 0.5s;
+
+          }
+          .layer:hover h3{
+            bottom: 49%;
+            opacity: 1;
+          }
+
+
+         .facilities{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 50px;
+         }
+        .facilities-col{
+            flex-basis: 32%;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            text-align: left;
+        }
+              .facilities-col img{
+                width: 100%;
+                border-radius: 10px;
+              }
+            .facilities-col p{
+                padding: 0;
+            }
+            .facilities-col h3{
+                margin-top: 16px;
+                margin-bottom: 15px;
+                text-align: left;
+            }
+             
+            .testimonials{
+                width: 80%;
+                margin: auto;
+                padding-top: 100px;
+                text-align: center;
+            }
+             
+        .testimonials-col{
+            flex-basis: 44%;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            text-align: left;
+            background: #fff3f3;
+            padding: 25px;
+            cursor: pointer;
+            display: flex;
+        }
+        .testimonials-col img{
+            height: 40px;
+            margin-left: 5px;
+            margin-right: 30;
+            border-radius: 50%;
+        }
+          .testimonials-col p{
+            padding: 0;
+          }
+          .testimonials-col h1{
+                 margin-top: 15px;
+                 text-align: left;
+          }
+            @media(max-width: 640px){
+                .testimonials-col img{
+                         
+                 margin-left: 0px;
+                 margin-right: 15px;
+                }
+            }
+             
+            .cta{
+                margin: 60px auto;
+                width: 80%;
+               background-image: url("https://img.freepik.com/premium-photo/abstract-blur-library-blurred-book-shelves-hall-generative-ai_791316-5844.jpg");
+                background-position: center;
+                background-size: cover;
+                border-radius: 10px;
+                text-align: center;
+                padding: 60px 0;
+            }
+           
+            .cta h1{
+                color: black;
+                margin-bottom: 40px;
+                padding: 0;
+            }
+            .btn{
+                border: #d2b3b3;
+            }
+            
+            .footer{
+                width: 100%;
+                text-align: center;
+                padding: 20px 0;
+                background-color: #fff3f3;
+            }
+              .footer h4{
+                margin-bottom: 25px;
+                margin-top: 20px;
+                font-weight: 600;
+              }
+              .contact-us {
+                text-align: center;
+                padding: 50px 0;
+                background-color: #f4f4f4;
+            }
+            
+            .contact-us h1 {
+                font-size: 2em;
+                margin-bottom: 20px;
+            }
+            
+            .contact-icons {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+            }
+            
+            .contact-icons a {
+                display: inline-block;
+            }
+            
+            .contact-icons img {
+                width: 50px;
+                height: 50px;
+                transition: transform 0.3s;
+            }
+            
+            .contact-icons img:hover {
+                transform: scale(1.2);
+            }
+    </style>
+</head>
+
+<body>
+    <section class="header">
+        <div class="blackBox">
+        
+        <nav>
+            <img src="https://png.pngtree.com/png-vector/20230306/ourmid/pngtree-scool-college-logo-victor-vector-png-image_6634445.png">
+            <div class="nav-links">
+                <ul>
+                    <li><a href="REGISTER.HTML">REGISTER</a></li>
+                    <li><a href="LOGIN.HTML">LOG IN</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="text-box">
+            <h1>World's Biggest University</h1>
+            <p>An institution that provides the highest level of education, in which<br> students study for degrees and
+                in which academic research is done</p>
+            <a href="" class="btn">Visit Us To Know More</a>
+        </div>
+
+
+
+    </section>
+    <!------- Course ------->
+    <section class="course">
+        <h1>Courses We Offer</h1>
+        <p>college courses provide students with a great variety of learning opportunities. However, proper mastery of
+            particular courses<br> much depends on the student's motivation.</p>
+
+        <div class="row">
+            <div class="course-col">
+                <h3>Intermediate</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem tempore nam nobis blanditiis ullam
+                    dolorum eligendi consequatur necessitatibus asperiores nihil nemo, magni quam ipsa, veritatis sequi
+                    corporis amet a cumque!</p>
+            </div>
+            <div class="course-col">
+                <h3>Degree</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem tempore nam nobis blanditiis ullam
+                    dolorum eligendi consequatur necessitatibus asperiores nihil nemo, magni quam ipsa, veritatis sequi
+                    corporis amet a cumque!</p>
+            </div>
+            <div class="course-col">
+                <h3>Post Graduation</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem tempore nam nobis blanditiis ullam
+                    dolorum eligendi consequatur necessitatibus asperiores nihil nemo, magni quam ipsa, veritatis sequi
+                    corporis amet a cumque!</p>
+            </div>
+        </div>
+
+    </div>
+    </section>
+
+    <section class="campus">
+        <h1>Global Campus</h1>
+       <p>Global Campus is Nord Anglia’s exclusive online learning platform, where students from our schools <br>around the world learn and develop their problem-solving and creative thinking skills.</p>
+              
+       <div class="row">
+        <div class="campus-col">
+          <img src="https://stuartshieldgardendesign.files.wordpress.com/2014/10/university_of_greenwich_pembroke-_-_geograph-org-uk_-_584932.jpg" width="100%">
+          <div class="layer">
+            <h3>LONDON</h3>
+          </div>
+        </div>
+
+        <div class="campus-col">
+            <img src="data:image/jpeg;base64,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" width="100%">
+            <div class="layer">
+              <h3>America</h3>
+            </div>
+          </div>
+
+          <div class="campus-col">
+            <img src="https://stuartshieldgardendesign.files.wordpress.com/2014/10/university_of_greenwich_pembroke-_-_geograph-org-uk_-_584932.jpg" width="100%">
+            <div class="layer">
+              <h3>Canada</h3>
+            </div>
+          </div>
+      
+          </div>
+       </div>
+    </section>
+
+
+
+
+
+
+
+    <section class="facilities">
+      <h1>Our facilities</h1>
+      <p>The students have all the facilities for games and sports. Adequate infrastructure are provided for indoor and outdoor games and extra-curricular activities</p>
+             
+            <div class="row">
+                <div class="facilities-col">
+                    <img src="https://i0.wp.com/stanzaliving.wpcomstaging.com/wp-content/uploads/2022/04/c9c13-libraries-in-coimbatore.jpg?fit=1000%2C750&ssl=1">
+                    <h3>World Class Library</h3>
+                    <p>The College Library houses a Book Bank, with a rich collection of around 1,300 books with yearly addition of around 50 books covering all the disciplines taught in the College.</p>
+                </div>
+
+                <div class="facilities-col">
+                    <img src="https://thumbs.dreamstime.com/b/university-ground-vintage-building-bright-blue-sky-morning-low-angle-image-taken-patna-college-bihar-india-apr-246241233.jpg">
+                    <h3>Largest Play Ground</h3>
+                    <p>Playground is situated within the college campus.  Facilities are available to play volleyball, cricket, football,chess, throw ball, boxing and athletics, with a view of developing a sense of team spirit  and to encourage a spirit of healthy environment.</p>
+                </div>
+
+                <div class="facilities-col">
+                    <img src="https://images.hindustantimes.com/rf/image_size_640x362/HT/p2/2016/09/16/Pictures/_debc72ae-7bdf-11e6-8cf4-f1fcbcc69a66.jpg">
+                    <h3>Tasty and Healthy Food</h3>
+                    <p>Find 50 easy meals for college students. These are simple meal ideas that don't take lots of time or ingredients, but still taste great!</p>
+                    
+                </div>
+
+            </div>
+
+    </section>
+      
+    <section class="testimonials">
+        <h1>What our Students says</h1>
+        <p>A testimonial is an honest endorsement of your product or service that usually comes from a customer, colleague, or peer who has benefited from or experienced success as a result of the work you did for them.</p>
+           
+        <div class="row">
+            <div class="testimonials-col">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQATBQ0P9oQDJlUhteg999Lhz0nebq5OT164A&s">
+                <div>
+                    <p>A testimonial is an honest endorsement of your product or service that usually comes from a customer, colleague, or peer who has benefited from or experienced success as a result of the work you did for them.</p>
+                    <h3>Christine Berkey</h3>
+                </div>
+            </div>
+
+            <div class="testimonials-col">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU5AlRS90bVVfqYEpSRD42oZccziRTP-GrAg&s">
+                <div>
+                    <p>A testimonial is an honest endorsement of your product or service that usually comes from a customer, colleague, or peer who has benefited from or experienced success as a result of the work you did for them.</p>
+                    <h3>David</h3>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </section>
+
+       <section class="cta">
+        <h1>Enroll For Our Various Online Courses Anywhere From The World</h1>
+        <a href="" class="btn">CONTACT US</a>
+       </section>
+
+          <section class="footer">
+            <h4>About Us</h4>
+            <p>College is an educational school where people go to learn and earn an academic degree upon graduation. The requirement to enter college is different in different countries, <br>but in most countries, the student must have a high school diploma or equivalent (in the United States and Canada, a GED).</p>
+            <div class="list">
+                <h4>Connect</h4>
+                <section class="contact-us">
+                    <h1>Contact Us</h1>
+                    <div class="contact-icons">
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                        </a>
+                        <a href="mailto:">
+                            <img src="https://th.bing.com/th?id=OIP.BCOgkDFoXALNblLx8Mi0IQAAAA&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Email">
+                        </a>
+                        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                        </a>
+                    </div>
+                </section>
+                
+                <div class="end-text">
+                    <p>Copyright 2024 All rights resreved | Made by Anjali</p>
+                 </div>
+          </section>
+
+
+
+
+
+
+</body>
+</html>
